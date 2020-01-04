@@ -1,0 +1,15 @@
+#galleryWrap ul:after{ content: ""; display: block; clear:both;}
+
+#galleryWrap li{ float:left; width: 33.3333%; min-width: 300px; margin: 0 auto;}
+#galleryWrap ul li a{ display:block; width:calc(100% - 20px); margin: 0 auto;
+                      border:1px solid #222; text-align: center;
+                      padding-bottom: 20px;
+                    }
+
+#galleryWrap li a img{ width:100%; max-width:800px; }
+#galleryWrap li a :not(img){ display: block; font-style: normal; line-height: 1; margin: 8px 0}
+
+#galleryWrap.verti li{ float: none; width: auto;}
+#galleryWrap.verti li a{ padding-bottom: 0; margin: 5px; width: auto; text-align: left;}
+#galleryWrap.verti li a img{ width: 200px; display: inline-block;}
+#galleryWrap.verti li a :not(img){display: inline-block;}

@@ -1,5 +1,6 @@
 <xml version='1.0' encoding="utf-8">
-  <galleryFolder>/ajax_xml/img/</galleryFolder>
+  <galleryFolder>/ajax_xml/2020/</galleryFolder>
+  <galleryStyle>verti</galleryStyle>
   <galleryList>
     <gallery>
       <galleryimg>img_0.jpg</galleryimg>

@@ -7,7 +7,10 @@ $(function(){
     success: function(data){
       var dataGallery = $(data).find('galleryList');
       var datagalleryList = dataGallery.find('gallery'); // Array
-      var datagalleryFolder = $(data).find('galleryFolder');
+      var datagalleryFolder = $(data).find('galleryFolder').text();
+      var dataGalleryStyle = $(data).find('galleryStyle').text();
+
+      $("#galleryWrap").addClass(dataGalleryStyle);
 
       datagalleryList.each(function(i){
         var hrefData = $(this).find('galleryhref').text(); // 링크 값
