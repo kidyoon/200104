@@ -1,0 +1,82 @@
+#arti_mVisual {position:relative;overflow:hidden;left:0;top:0;background:#fff;}
+#arti_mVisual>.artiWrap {overflow:hidden;max-width:1920px;height:100%;box-sizing:border-box;padding-left:160px !important;}
+#arti_mVisual::before,
+#arti_mVisual::after,
+#arti_mVisual>.artiWrap::before {content:'';display:none;position:absolute;top:0;width:1px;height:120%;background:#a2a2ad;opacity:0.3;z-index:2;}/*190924학교요청 삭제*/
+#arti_mVisual::before {left:560px;}
+#arti_mVisual::after {left:960px}
+#arti_mVisual>.artiWrap::before {left:1359px;}
+#arti_mVisual.on {display:block;z-index:100;transform-style:preserve-3d;-webkit-transform-style:preserve-3d;-ms-transform-style:preserve-3d;}
+#arti_mVisual.on>.artiWrap {overflow-x:hidden;overflow-y:auto;}
+#arti_mVisual.on.prevDown {
+    overflow:hidden;
+    transform:scale3d(0.9, 0.9, 0.9);
+    -webkit-transform:scale3d(0.9, 0.9, 0.9);
+    opacity:0.7;transition:0.4s;
+}
+#arti_mVisual.on.nextDown {
+    overflow:hidden;top:1500px;
+    animation:nextMotion 0.4s 0.4s forwards;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform:perspective(100px) rotate3d(1, 0, 0, 1deg);
+    -webkit-animation:nextMotion 0.4s 0.4s forwards;
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform:perspective(100px) rotate3d(1, 0, 0, 1deg);
+    z-index:100;
+}
+@keyframes nextMotion {
+    0% {
+        transform:perspective(100px) rotate3d(1, 0, 0, 1deg);
+        -webkit-transform:perspective(100px) rotate3d(1, 0, 0, 1deg);
+    }
+    100% {
+        transform:perspective(0) rotate3d(1, 0, 0, 0deg);
+        -webkit-transform:perspective(0) rotate3d(1, 0, 0, 0deg);
+    }
+}
+
+#arti_mVisual .slick-arrow.bby{ position: absolute; font:0 /0 all; z-index: 1000;
+   width: 50px; height: 50px; border: 1px solid red; top:50%;}
+#arti_mVisual .slick-prev.bby{left: 0; transform: translate(50%, -50%) rotate(-45deg);
+   border-right: 0; border-bottom: 0;}
+#arti_mVisual .slick-next.bby{right: 0; transform: translate(-50%, -50%) rotate(-45deg);
+   border-left: 0; border-top: 0;}
+
+
+#arti_mVisual>.artiWrap {overflow:visible !important;padding-left:0 !important;background:#fff;}
+#arti_mVisual::before,
+#arti_mVisual::after,
+#arti_mVisual>.artiWrap::before {top:0;}
+#arti_mVisual .mVisual {position:relative;right:0;width:1920px;height:830px;}
+#arti_mVisual .unit {position:relative;width:1920px;}
+#arti_mVisual .unit>a {position:relative;z-index:0;}
+#arti_mVisual .unit>img,
+#arti_mVisual .unit>a>img {width:1920px;height:830px;}
+#arti_mVisual .unit>span,
+#arti_mVisual .unit>a>span {display:none;}
+#arti_mVisual .unit .tit {position:absolute;left:160px;top:140px;}
+#arti_mVisual .unit .tit a {display:inline-block;}
+/*#arti_mVisual .unit .tit>span {display:block;overflow:hidden;max-height:295px;margin-left:30px;color:#fff;font-family:'Oswald',sans-serif;font-size:88px;font-weight:500;line-height:98px;text-transform:uppercase;}*//*Oswald폰트일때*/
+#arti_mVisual .unit .tit>span {display:block;overflow:hidden;max-height:225px;margin-left:30px;color:#fff;font-family:'Noto Sans KR',sans-serif;font-size:65px;font-weight:500;line-height:75px;text-transform:uppercase;letter-spacing:-3px;}
+#arti_mVisual .unit .txt {position:relative;left:0px;top:60px;}
+/*#arti_mVisual .unit .txt>span {display:block;margin-left:30px;color:#fff;font-family:'Noto Sans KR',sans-serif;font-size:24px;font-weight:300;line-height:34px;}*//*Oswald폰트일때*/
+#arti_mVisual .unit .txt>span {display:block;margin-left:30px;color:#fff;font-family:'Noto Sans KR',sans-serif;font-size:23px;font-weight:300;line-height:33px;letter-spacing:-1px;}
+#arti_mVisual .unit .notice {position:absolute;left:160px;bottom:50px;padding-right:180px;}
+#arti_mVisual .unit .notice>span {display:block;overflow:hidden;max-height:105px;margin-left:30px;padding-left:32px;background:url(../img/main/ico_bellPoint.png) no-repeat left top 0;opacity:0;}
+#arti_mVisual .unit .notice>span>a {display:block;overflow:hidden;color:#fff;font-family:'Noto Sans KR',sans-serif;font-size:21px;font-weight:300;line-height:23px;letter-spacing:-1px;}
+#arti_mVisual .unit.slick-active,
+#arti_mVisual .unit.slick-center {opacity:1;}
+#arti_mVisual .slick-dots {position:absolute;left:160px;top:590px;margin-left:150px;padding-left:30px;padding-right:180px;opacity:0;}
+#arti_mVisual .slick-dots li {position:relative;float:left;width:15px;text-align:center;}
+#arti_mVisual .slick-dots li+li {margin-left:60px;}
+#arti_mVisual .slick-dots li+li::before {content:'';display:block;position:absolute;left:-33px;top:7px;width:6px;height:6px;border-radius:3px;background:#b6b3b0;}
+#arti_mVisual .slick-dots li button {overflow:hidden;color:#b6b3b0;font-family:'Oswald';font-size:18px;line-height:18px;text-align:left;}
+#arti_mVisual .slick-dots li.slick-active button {color:#fff;}
+#arti_mVisual .slick-dots:after {content:'';display:block;position:absolute;right:0;top:7px;width:160px;height:4px;background:#cfcfcf;}
+#arti_mVisual .list_control {position:absolute;left:160px;top:590px;height:0;margin-left:150px;opacity:0;}
+#arti_mVisual .list_control>button {display:block;position:relative;top:4px;overflow:hidden;width:8px;height:12px;background-repeat:no-repeat;background-position:center;text-indent:-999px;vertical-align:top;z-index:2;}
+#arti_mVisual .list_control>.btn_pause {background-image:url(../img/main/btn_pause.png);}
+#arti_mVisual .list_control>.btn_play {background-image:url(../img/main/btn_play.png);}
+
+/* ytp visual 추가 20191126 */
+#arti_mVisual .ytpVisual{height:calc(100vh - 120px);background: #363c53;}
